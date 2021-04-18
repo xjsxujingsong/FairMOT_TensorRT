@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mot\detection.cpp" />
+    <ClCompile Include="mot\FairMOT.cpp" />
+    <ClCompile Include="mot\Hungarian.cpp" />
+    <ClCompile Include="mot\kalmanfilter.cpp" />
+    <ClCompile Include="mot\matching.cpp" />
+    <ClCompile Include="mot\tracker.cpp" />
+    <ClCompile Include="mot\utils.cpp" />
+    <ClCompile Include="src\builder\trt_builder.cpp" />
+    <ClCompile Include="src\common\cc_util.cpp" />
+    <ClCompile Include="src\common\json.cpp" />
+    <ClCompile Include="src\import_lib.cpp" />
+    <ClCompile Include="src\infer\trt_infer.cpp" />
+    <ClCompile Include="src\onnxplugin\onnxplugin.cpp" />
+    <ClCompile Include="src\onnx_parser\builtin_op_importers.cpp" />
+    <ClCompile Include="src\onnx_parser\ModelImporter.cpp" />
+    <ClCompile Include="src\onnx_parser\NvOnnxParser.cpp" />
+    <ClCompile Include="src\onnx_parser\onnx2trt_utils.cpp" />
+    <ClCompile Include="src\onnx_parser\OnnxAttrs.cpp" />
+    <ClCompile Include="src\onnx_parser\ShapedWeights.cpp" />
+    <ClCompile Include="src\onnx_parser\ShapeTensor.cpp" />
+    <ClCompile Include="src\plugin\plugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mot\config.h" />
+    <ClInclude Include="mot\dataType.h" />
+    <ClInclude Include="mot\detection.h" />
+    <ClInclude Include="mot\Hungarian.h" />
+    <ClInclude Include="mot\kalmanfilter.h" />
+    <ClInclude Include="mot\matching.h" />
+    <ClInclude Include="mot\tracker.h" />
+    <ClInclude Include="mot\utils.h" />
+    <ClInclude Include="src\builder\trt_builder.hpp" />
+    <ClInclude Include="src\common\cc_util.hpp" />
+    <ClInclude Include="src\common\json.hpp" />
+    <ClInclude Include="src\infer\task_pool.hpp" />
+    <ClInclude Include="src\infer\trt_infer.hpp" />
+    <ClInclude Include="src\onnxplugin\onnxplugin.hpp" />
+    <ClInclude Include="src\onnxplugin\plugins\DCNv2.hpp" />
+    <ClInclude Include="src\onnxplugin\plugins\HSigmoid.hpp" />
+    <ClInclude Include="src\onnxplugin\plugins\HSwish.hpp" />
+    <ClInclude Include="src\onnxplugin\plugins\MReLU.hpp" />
+    <ClInclude Include="src\onnx_parser\builtin_op_importers.hpp" />
+    <ClInclude Include="src\onnx_parser\ImporterContext.hpp" />
+    <ClInclude Include="src\onnx_parser\ModelImporter.hpp" />
+    <ClInclude Include="src\onnx_parser\NvOnnxParser.h" />
+    <ClInclude Include="src\onnx_parser\onnx2trt.hpp" />
+    <ClInclude Include="src\onnx_parser\onnx2trt_utils.hpp" />
+    <ClInclude Include="src\onnx_parser\OnnxAttrs.hpp" />
+    <ClInclude Include="src\onnx_parser\onnx_utils.hpp" />
+    <ClInclude Include="src\onnx_parser\ShapedWeights.hpp" />
+    <ClInclude Include="src\onnx_parser\ShapeTensor.hpp" />
+    <ClInclude Include="src\onnx_parser\Status.hpp" />
+    <ClInclude Include="src\onnx_parser\TensorOrWeights.hpp" />
+    <ClInclude Include="src\onnx_parser\toposort.hpp" />
+    <ClInclude Include="src\onnx_parser\trt_utils.hpp" />
+    <ClInclude Include="src\onnx_parser\utils.hpp" />
+    <ClInclude Include="src\plugin\plugins\TestPlugin.hpp" />
+    <ClInclude Include="src\plugin\plugins\ChannelMultiplicationLayer.hpp" />
+    <ClInclude Include="src\plugin\plugins\ClipLayer.hpp" />
+    <ClInclude Include="src\plugin\plugins\DCNLayer.hpp" />
+    <ClInclude Include="src\plugin\plugins\PlexShuffleLayer.hpp" />
+    <ClInclude Include="src\plugin\plugin.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\onnxplugin\plugins\DCNv2.cu" />
+    <CudaCompile Include="src\onnxplugin\plugins\HSigmoid.cu" />
+    <CudaCompile Include="src\onnxplugin\plugins\HSwish.cu" />
+    <CudaCompile Include="src\onnxplugin\plugins\MReLU.cu" />
+    <CudaCompile Include="src\plugin\plugins\TestPlugin.cu" />
+    <CudaCompile Include="src\plugin\plugins\ChannelMultiplicationLayer.cu" />
+    <CudaCompile Include="src\plugin\plugins\ClipLayer.cu" />
+    <CudaCompile Include="src\plugin\plugins\DCNLayer.cu" />
+    <CudaCompile Include="src\plugin\plugins\PlexShuffleLayer.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FBF775F5-DAB4-4BC1-97A9-D36301073438}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TensorRT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>workspace</OutDir>
+    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>D:\study\eigen3;./mot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include;D:\study\opencv\opencv-4.3.0-dev\opencv\build_cuda_contri_python\install\include;D:\code\TensorRT-7.0.0.11\include;D:\study\onnx\build\install\include;D:\study\protobuf-3.11.4\cmake\build\install\include;./src;./src/common;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>D:\code\TensorRT-7.0.0.11\lib;D:\study\opencv\opencv-4.3.0-dev\opencv\build_cuda_contri_python\install\x64\vc15\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;D:\study\protobuf-3.11.4\cmake\build\install\lib;D:\study\onnx\build\install\lib\debug;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>workspace</OutDir>
+    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>D:\study\eigen3;./mot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include;D:\study\opencv\opencv-4.3.0-dev\opencv\build_cuda_contri_python\install\include;D:\code\TensorRT-7.0.0.11\include;D:\study\onnx\build\install\include;D:\study\protobuf-3.11.4\cmake\build\install\include;./src;./src/common;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>D:\code\TensorRT-7.0.0.11\lib;D:\study\opencv\opencv-4.3.0-dev\opencv\build_cuda_contri_python\install\x64\vc15\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;D:\study\protobuf-3.11.4\cmake\build\install\lib;D:\study\onnx\build\install\lib\release;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ONNX_ML;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions>/D"ONNX_NAMESPACE"=onnx2trt_onnx %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world440d.lib;D:\study\onnx\build\install\lib\debug\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <CodeGeneration>compute_61,sm_61</CodeGeneration>
+      <Defines>ONNX_ML</Defines>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ONNX_ML;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/D "ONNX_NAMESPACE"=onnx2trt_onnx %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world440.lib;D:\study\onnx\build\install\lib\release\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <CodeGeneration>compute_61,sm_61</CodeGeneration>
+      <Defines>ONNX_ML</Defines>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.targets" />
+  </ImportGroup>
+</Project>

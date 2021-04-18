@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{c1662522-7ed5-455d-a6dd-43bd40c68af3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\builder">
+      <UniqueIdentifier>{555209c4-e4b6-4fb1-bd22-9256abdd67ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\infer">
+      <UniqueIdentifier>{ccaa2911-0572-4115-9b6b-78e2ff4844f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\plugin">
+      <UniqueIdentifier>{3c8275bc-87c9-48a8-a42a-cc1e2ba3aabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\plugin\plugins">
+      <UniqueIdentifier>{0a451f49-64f0-4f84-b2e5-013ee81ee24f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\onnxplugin">
+      <UniqueIdentifier>{7d09b9c6-88bf-4100-a8ed-698035a0b28d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\onnxplugin\plugins">
+      <UniqueIdentifier>{234f1647-c24b-4a06-8009-a2dab963cad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\onnx_parser">
+      <UniqueIdentifier>{c3b696d1-13aa-4f72-98a9-439b77ef4698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mot">
+      <UniqueIdentifier>{8b869fb7-e18d-4869-a93a-09311d282c07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\import_lib.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\cc_util.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\builder\trt_builder.cpp">
+      <Filter>src\builder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\infer\trt_infer.cpp">
+      <Filter>src\infer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plugin\plugin.cpp">
+      <Filter>src\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\json.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\builtin_op_importers.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\ModelImporter.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\NvOnnxParser.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\onnx2trt_utils.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\OnnxAttrs.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\ShapedWeights.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnx_parser\ShapeTensor.cpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\onnxplugin\onnxplugin.cpp">
+      <Filter>src\onnxplugin</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\detection.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\FairMOT.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\Hungarian.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\matching.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\tracker.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\utils.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+    <ClCompile Include="mot\kalmanfilter.cpp">
+      <Filter>mot</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common\cc_util.hpp">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\builder\trt_builder.hpp">
+      <Filter>src\builder</Filter>
+    </ClInclude>
+    <ClInclude Include="src\infer\trt_infer.hpp">
+      <Filter>src\infer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\infer\task_pool.hpp">
+      <Filter>src\infer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugin.hpp">
+      <Filter>src\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugins\ChannelMultiplicationLayer.hpp">
+      <Filter>src\plugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugins\ClipLayer.hpp">
+      <Filter>src\plugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugins\DCNLayer.hpp">
+      <Filter>src\plugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugins\PlexShuffleLayer.hpp">
+      <Filter>src\plugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin\plugins\TestPlugin.hpp">
+      <Filter>src\plugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\json.hpp">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnxplugin\plugins\DCNv2.hpp">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnxplugin\plugins\HSwish.hpp">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\builtin_op_importers.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\ImporterContext.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\ModelImporter.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\NvOnnxParser.h">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\onnx_utils.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\onnx2trt.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\onnx2trt_utils.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\OnnxAttrs.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\ShapedWeights.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\ShapeTensor.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\Status.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\TensorOrWeights.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\toposort.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\trt_utils.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnx_parser\utils.hpp">
+      <Filter>src\onnx_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnxplugin\onnxplugin.hpp">
+      <Filter>src\onnxplugin</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnxplugin\plugins\MReLU.hpp">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="src\onnxplugin\plugins\HSigmoid.hpp">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\config.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\detection.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\Hungarian.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\matching.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\tracker.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\utils.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\dataType.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+    <ClInclude Include="mot\kalmanfilter.h">
+      <Filter>mot</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\plugin\plugins\ChannelMultiplicationLayer.cu">
+      <Filter>src\plugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\plugin\plugins\ClipLayer.cu">
+      <Filter>src\plugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\plugin\plugins\DCNLayer.cu">
+      <Filter>src\plugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\plugin\plugins\PlexShuffleLayer.cu">
+      <Filter>src\plugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\plugin\plugins\TestPlugin.cu">
+      <Filter>src\plugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\onnxplugin\plugins\DCNv2.cu">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\onnxplugin\plugins\HSwish.cu">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\onnxplugin\plugins\MReLU.cu">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\onnxplugin\plugins\HSigmoid.cu">
+      <Filter>src\onnxplugin\plugins</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>
