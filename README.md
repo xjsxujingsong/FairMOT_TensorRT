@@ -1,6 +1,6 @@
 This is C++ version of [FairMOT](https://github.com/ifzhang/FairMOT) using TensorRT in Windows.
 
-The detection and feature extraction parts using TensorRT can refer to [tensorRTIntegrate](https://github.com/dlunion/tensorRTIntegrate).
+The detection and feature extraction parts using TensorRT can refer to [tensorRTIntegrate](https://github.com/dlunion/tensorRTIntegrate). If you would like to remove the dependency of DCN, please refer to another repository [FairMOT_TensorRT_C](https://github.com/xjsxujingsong/FairMOT_TensorRT_C).
 
 
 ## How to Run
